@@ -52,7 +52,7 @@ def analyze_pdf_with_gemini(pdf_text):
         """
 
     try:
-        model = genai.GenerativeModel('gemini-2.5-pro-preview-05-20')
+        model = genai.GenerativeModel('gemini-2.5-pro')
         prompt = f"""
         Based on the following text extracted from a PDF document, please provide a comprehensive analysis. Structure your response into two distinct sections:
 
