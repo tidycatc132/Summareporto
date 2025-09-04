@@ -98,7 +98,7 @@ def extract_text_from_pdf(uploaded_file):
 
 
 # --- Streamlit App UI ---
-st.set_page_config(page_title="PDF Analyzer with Gemini", layout="wide", page_icon="📄")
+st.set_page_config(page_title="PDF Analyzer with Gemini", page_icon="📄")
 
 # Custom CSS for a better look and feel
 st.markdown("""
