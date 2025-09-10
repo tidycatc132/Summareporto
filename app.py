@@ -47,21 +47,19 @@ def analyze_pdf_with_gemini(pdf_text):
         This is a simulated in-depth analysis. In a real scenario, this section would provide a detailed breakdown of the document's content. It would explore the primary topics, methodologies, and conclusions presented in the PDF. Key points would be elaborated upon, and a critical perspective might be offered on the document's strengths, weaknesses, and implications. For example, it could include:
         - **Main Arguments:** A bulleted list or detailed paragraphs on the core arguments.
         - **Evidence and Data:** Analysis of the data or evidence used to support the claims.
-        - **Potential Biases:** Identification of any potential biases or limitations.
         - **Conclusion and Recommendations:** A deeper look at the document's conclusions and any actionable recommendations.
         """
 
     try:
         model = genai.GenerativeModel('gemini-2.5-pro')
         prompt = f"""
-        Based on the following text extracted from a PDF document, please provide a comprehensive analysis. Structure your response into two distinct sections:
+        Based on the following text extracted from a PDF document, please provide a brief analysis. Structure your response similar to the below:
 
-        1.  **Executive Summary:** A concise, high-level overview of the document's key points, purpose, and conclusions. This should be easy to understand for someone who has not read the document.
+        1.  **Executive Summary:** A detailed analysis and overview of the document's key points, purpose, and conclusions. Provide information on the biggest changes in data and provide a possible explanation for the change in data. The information you provide should be easy to understand for someone who has not read the document.
 
         2.  **In-depth Analysis:** A detailed breakdown of the document. This should include:
-            * Identification of the main arguments or topics.
-            * An evaluation of the evidence or data presented.
-            * A discussion of the document's implications, strengths, and potential weaknesses.
+            * Provide information about the positive and negative data points from the document
+            * Providce insights into the evaluation of the data
             * Any other critical insights you can derive from the text.
 
         Here is the document text:
